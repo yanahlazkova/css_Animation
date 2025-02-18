@@ -1,0 +1,110 @@
+/* Анімація - збільшення кнопки при наведенні */
+body {
+    display: flex;
+    align-content: center;
+}
+
+.animate_button {
+    margin: auto;
+    aspect-ratio: 0.5;
+    align-content: center;
+}
+
+button {
+    width: 100px;
+    aspect-ratio: 2;
+}
+
+button:hover {
+    box-shadow: 5px 3px 5px 1px rgba(0, 0, 255, .2);
+    animation: smallbutton;
+    animation-duration: 3s;
+    border: none;
+    animation-fill-mode: forwards;
+}
+
+@keyframes smallbutton {
+    100%{
+        background-color: lightblue;
+        box-shadow: 10px 20px 30px blue;;
+    }
+}
+
+/* Анімація - змінення картинок у сітці */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-item {
+    width: 200px;
+    aspect-ratio: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: aquamarine;
+}
+/*  */
+
+#item_1 {
+    background-image: url("img/13.png");
+    animation: chengeimg_1 20s infinite;
+
+}
+
+#item_2 {
+    background-image: url("img/12.png");
+    animation: chengeimg_2 20s infinite;
+
+}
+
+#item_3 {
+    background-image: url("img/3.png");
+    animation: chengeimg_3 20s infinite;
+
+}
+#item_4 {
+    background-image: url("img/7.png");
+    animation: chengeimg_4 20s infinite;
+
+}
+#item_5 {
+    background-image: url("img/1.png");
+    animation: chengeimg_5 20s infinite;
+
+}
+
+@keyframes chengeimg_1 {
+    40% {background-image: url("img/3.png");}
+    20% {background-image: url("img/12.png");}
+    60% {background-image: url("img/7.png");}
+    80% {background-image: url("img/1.png");}
+}
+@keyframes chengeimg_2 {
+    20% {background-image: url("img/3.png");}
+    40% {background-image: url("img/7.png");}
+    60% {background-image: url("img/1.png");}
+    80% {background-image: url("img/13.png");}
+}
+@keyframes chengeimg_3 {
+    20% {background-image: url("img/7.png");}
+    40% {background-image: url("img/1.png");}
+    60% {background-image: url("img/13.png");}
+    80% {background-image: url("img/12.png");}
+}
+@keyframes chengeimg_4 {
+    20% {background-image: url("img/1.png");}
+    40% {background-image: url("img/13.png");}
+    60% {background-image: url("img/12.png");}
+    80% {background-image: url("img/3.png");}
+}
+@keyframes chengeimg_5 {
+    20% {background-image: url("img/13.png");}
+    40% {background-image: url("img/12.png");}
+    60% {background-image: url("img/3.png");}
+    80% {background-image: url("img/7.png");}
+}
+
+/* @keyframes chengesize {
+    50% {background-size: 100px 100px;}
+} */
